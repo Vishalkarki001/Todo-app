@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState} from 'react'
 import toast, { Toaster } from 'react-hot-toast';
-import { CiCircleRemove } from "react-icons/ci";
+
 
 
 function App() {
@@ -77,8 +77,7 @@ function App() {
      <div className='flex justify-end'>
 
      <button  className='rounded-full bg-red-500 mt-4 shadow-lg  px-3'
-     onClick={removeall}>Remove all<CiCircleRemove />
-</button>
+     onClick={removeall}>Remove all</button>
      </div>
      
     </div>
