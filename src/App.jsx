@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState} from 'react'
 import toast, { Toaster } from 'react-hot-toast';
+import { CiCircleRemove } from "react-icons/ci";
 
 
 function App() {
@@ -39,7 +40,7 @@ function App() {
       <div className=" text-xl font-sans text-white  bg-blue-500 p-10 text-center rounded-md  " >
         <h2 className='text-2xl font-sans underline'>Todo-App</h2>
         <input
-        className=' rounded-sm p-x-7 mt-4  text-black'
+        className=' rounded-sm p-x-7 mt-4  text-black text-lg'
         name="name"
         value={data}
         type="text"
@@ -47,7 +48,7 @@ function App() {
         onChange={(e)=>setData(e.target.value)}
 
         />
-        <button onClick={addwork} className='bg-blue-400 px-3.5 rounded-sm'>Add+</button>
+        <button onClick={addwork} className='bg-blue-400 px-3.5 rounded-sm text-lg'>Add+</button>
         <br/>
     
   
@@ -76,7 +77,8 @@ function App() {
      <div className='flex justify-end'>
 
      <button  className='rounded-full bg-red-500 mt-4 shadow-lg  px-3'
-     onClick={removeall}>Remove all</button>
+     onClick={removeall}>Remove all<CiCircleRemove />
+</button>
      </div>
      
     </div>
