@@ -1,6 +1,8 @@
 import React from 'react'
 import {useState} from 'react'
 import toast, { Toaster } from 'react-hot-toast';
+import { CiCircleRemove } from "react-icons/ci";
+import { IoAddCircleOutline } from "react-icons/io5";
 
 
 
@@ -40,7 +42,7 @@ function App() {
       <div className=" text-xl font-sans text-white  bg-blue-500 p-10 text-center rounded-md  " >
         <h2 className='text-2xl font-sans underline'>Todo-App</h2>
         <input
-        className=' rounded-sm p-x-7 mt-4  text-black text-lg'
+        className=' rounded-sm p-x-7 mt-4  text-black text-lg '
         name="name"
         value={data}
         type="text"
@@ -48,7 +50,8 @@ function App() {
         onChange={(e)=>setData(e.target.value)}
 
         />
-        <button onClick={addwork} className='bg-blue-400 px-3.5 rounded-sm text-lg'>Add+</button>
+        <button onClick={addwork} className='bg-blue-400 px-3.5 rounded-sm text-lg'>Add +
+        </button>
         <br/>
     
   
@@ -60,8 +63,8 @@ function App() {
         <p key={i}>
           <div className='flex'>
         <div className='bg-orange-500 font-sans p-1 rounded-sm px-10'>{data}</div>
-        <div className='bg-green-500 px-3 rounded-sm '>
-   <button  onClick={()=>removework(i)}>-</button>
+        <div className='bg-green-500 px-3 rounded-sm flex hover:shadow-xl '>
+   <button   onClick={()=>removework(i)}><CiCircleRemove /></button>
    </div>
         </div>
 
