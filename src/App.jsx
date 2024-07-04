@@ -11,6 +11,12 @@ function App() {
   const[listdata,setListdata]=useState([]);
   
   function addwork(){
+    if(data==[]){
+      toast.error("First,write some work")
+      listdata==''
+    }else
+   
+  {
    
     setListdata((listdata)=>{
       const updatedlist=[...listdata,data]
@@ -20,6 +26,7 @@ function App() {
     })
 
   }
+}
   function removework(i){
     const updatedlistData=listdata.filter((elem,id)=>{
       return i !=id;
@@ -38,8 +45,8 @@ function App() {
 
     <>
      
-    <div className=' flex  justify-center items-center mt-10'> 
-      <div className=" text-xl font-sans text-white  bg-blue-500 p-10 text-center rounded-md  " >
+    <div className=' flex  justify-center items-center mt-10 '> 
+      <div className=" text-xl font-sans text-white  bg-blue-500 p-10 text-center rounded-md shadow-lg " >
         <h2 className='text-2xl font-sans underline'>Todo-App</h2>
         <input
         className=' rounded-sm p-x-7 mt-4  text-black text-lg '
