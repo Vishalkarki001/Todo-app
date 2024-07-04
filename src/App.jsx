@@ -29,7 +29,7 @@ function App() {
 }
   function removework(i){
     const updatedlistData=listdata.filter((elem,id)=>{
-      return i !=id;
+      return i !=id; 
     })
     setListdata(updatedlistData);
 
@@ -40,6 +40,7 @@ function App() {
     }
     setListdata('')
   }
+
  
   return (
 
